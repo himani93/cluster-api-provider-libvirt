@@ -5,6 +5,49 @@ metadata:
   name: manager-role
 rules:
 - apiGroups:
+  - cluster.k8s.io
+  resources:
+  - machines
+  - machines/status
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
+  - cluster.k8s.io
+  resources:
+  - machineClasses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - cluster.k8s.io
+  resources:
+  - clusters
+  - clusters/status
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - ""
+  resources:
+  - nodes
+  - events
+  verbs:
+  - get
+  - list
+  - watch
+  - create
+  - update
+  - patch
+  - delete
+- apiGroups:
   - libvirt.cluster.k8s.io
   resources:
   - hwmachineproviderspecs
