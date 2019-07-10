@@ -27,6 +27,17 @@ import (
 type LibvirtMachineProviderSpecSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	// Number of virtual CPU
+	VCPU int `json:"vcpu"`
+
+	// Amount of RAM in GBs
+	MemoryInGB int `json:"memoryInGB"`
+
+	// Image URL to be provisioned
+	ImageURI string `json:"imageURI"`
+
+	// UserData URI of cloud-init image
+	UserDataURI string `json:"userDataURI"`
 }
 
 // LibvirtMachineProviderSpecStatus defines the observed state of LibvirtMachineProviderSpec
