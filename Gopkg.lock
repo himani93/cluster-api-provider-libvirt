@@ -140,6 +140,18 @@
   version = "v1.1.6"
 
 [[projects]]
+  name = "github.com/libvirt/libvirt-go"
+  packages = ["."]
+  revision = "2a80233c4f59d0919935c575151cf7de4f3b0cb1"
+  version = "v5.5.0"
+
+[[projects]]
+  name = "github.com/libvirt/libvirt-go-xml"
+  packages = ["."]
+  revision = "f103ccd67629eedbcd46cf3f2c952c27637543fd"
+  version = "v5.5.0"
+
+[[projects]]
   name = "github.com/markbates/inflect"
   packages = ["."]
   revision = "24b83195037b3bc61fcda2d28b7b0518bce293b6"
@@ -419,6 +431,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "3d2e60a03d928807ba562612dad4f4ba5e4bb7bef795d7da7c934e8ee24ba064"
+  inputs-digest = "1785982433f64649d232a006efe54c1b6c952eb5d617a77c0f4fac1c361b0c56"
   solver-name = "gps-cdcl"
   solver-version = 1
