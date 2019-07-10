@@ -14,5 +14,6 @@ RUN CGO_ENABLED=1 GOOS=linux GOARCH=amd64 go build -a -o manager sigs.k8s.io/clu
 # Copy the controller-manager into a thin image
 FROM ubuntu:latest
 WORKDIR /
+RUN apt-get update && apt-get install -y libvirt-dev
 COPY --from=builder /go/src/sigs.k8s.io/cluster-api-provider-libvirt/manager .
 ENTRYPOINT ["/manager"]
