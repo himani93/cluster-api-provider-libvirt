@@ -23,3 +23,5 @@ vendor/*
 *.swp
 *.swo
 *~
+
+provider-components.yaml
