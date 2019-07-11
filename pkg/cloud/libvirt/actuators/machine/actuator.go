@@ -41,9 +41,15 @@ func (a *Actuator) Create(ctx context.Context, cluster *clusterv1.Cluster, machi
 	}
 
 	spec := providerSpec.Spec
-	log.Printf("Create machine actuator called for context %v, cluster %v, machine %v", ctx, cluster, machine)
-	l.CreateDomain(providerSpec.Name, spec.VCPU, uint(spec.MemoryInGB), spec.ImageURI, spec.UserDataURI)
+	log.Printf("Create machine actuator called for machine %v", providerSpec)
 
+	err = l.CreateDomain(machine.Name, spec.VCPU, uint(spec.MemoryInGB), spec.ImageURI, spec.UserDataURI)
+	if err != nil {
+		log.Printf("Error creating node for machine: %v, %v", machine, err)
+		return fmt.Errorf("Error creating node for machine: %v, %v", machine, err)
+	}
+
+	log.Printf("Machine %v created.", machine.Name)
 	return nil
 }
 

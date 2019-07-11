@@ -1,31 +1,34 @@
 package libvirt
 
 import (
+	"fmt"
 	"log"
 
 	libvirt "github.com/libvirt/libvirt-go"
 	libvirtxml "github.com/libvirt/libvirt-go-xml"
 )
 
-func CreateDomain(name string, vcpu int, memory_in_gb uint, image_uri string, user_data_uri string) {
+func CreateDomain(name string, vcpu int, memory_in_gb uint, image_uri string, user_data_uri string) error {
 	domainDef, err := defineDomain(name, vcpu, memory_in_gb, image_uri, user_data_uri)
 	if err != nil {
-		panic(err)
+		return fmt.Errorf("Error defining domain %v XML: %v", name, err)
 	}
 
 	log.Printf("Domain Definition XML: %v", domainDef)
 
-	conn, err := libvirt.NewConnect("qemu+tcp://192.168.99.1:16509/system")
+	conn, err := libvirt.NewConnect("qemu+tcp://192.168.122.1:16509/system")
 	if err != nil {
-		log.Printf("Error creating a new connection: %v", err)
-		panic(err)
+		log.Printf("Error creating a new Libvirt connection: %v", err)
+		return fmt.Errorf("Error creating a new Libvirt connection: %v", err)
 	}
+
 	_, err = conn.DomainCreateXML(domainDef, 0)
 	if err != nil {
-		log.Printf("Error creating a new domain: %v", err)
-		panic(err)
+		return fmt.Errorf("Error creating a new domain: %v", err)
 	}
+
 	conn.Close()
+	return nil
 }
 
 func defineDomain(name string, vcpu int, memory_in_gb uint, image_uri string, user_data_uri string) (string, error) {
@@ -33,7 +36,7 @@ func defineDomain(name string, vcpu int, memory_in_gb uint, image_uri string, us
 
 	bootOrder := uint(1)
 	domcfg = &libvirtxml.Domain{
-		Type: "qemu",
+		Type: "kvm",
 		Name: name,
 		Memory: &libvirtxml.DomainMemory{
 			Value: memory_in_gb,
