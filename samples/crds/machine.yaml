@@ -1,0 +1,14 @@
+apiVersion: "cluster.k8s.io/v1alpha1"
+kind: Machine
+metadata:
+  name: kube-cp
+spec:
+  providerSpec:
+    value:
+      apiVersion: "libvirt.cluster.k8s.io/v1alpha1"
+      kind: "LibvirtMachineProviderSpec"
+      spec:
+        vcpu: 2
+        memoryInGB: 2
+        imageURI: /home/carbon/dev/go-projects/src/github.com/himani93/libvirt-go-examples/images/vm-images/vm3/base.qcow2
+        userDataURI: /home/carbon/dev/go-projects/src/github.com/himani93/libvirt-go-examples/images/vm-images/vm3/user-data.img
