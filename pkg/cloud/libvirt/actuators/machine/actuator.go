@@ -62,7 +62,7 @@ func (a *Actuator) Update(ctx context.Context, cluster *clusterv1.Cluster, machi
 }
 
 func (a *Actuator) Exists(ctx context.Context, cluster *clusterv1.Cluster, machine *clusterv1.Machine) (bool, error) {
-	return false, nil
+	return l.DomainExists(machine.Name)
 }
 
 func (a *Actuator) GetIP(cluster *clusterv1.Cluster, machine *clusterv1.Machine) (string, error) {

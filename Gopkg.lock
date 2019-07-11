@@ -4,8 +4,8 @@
 [[projects]]
   name = "cloud.google.com/go"
   packages = ["compute/metadata"]
-  revision = "cf81fad90a1a1de334c4fc27e23eb9a4224b627a"
-  version = "v0.41.0"
+  revision = "457ea5c15ccf3b87db582c450e80101989da35f7"
+  version = "v0.40.0"
 
 [[projects]]
   name = "github.com/appscode/jsonpatch"
@@ -65,13 +65,13 @@
   branch = "master"
   name = "github.com/golang/groupcache"
   packages = ["lru"]
-  revision = "869f871628b6baa9cfbc11732cdf6546b17c1298"
+  revision = "5b532d6fd5efaf7fa130d4e859a2fde0fc3a9e1b"
 
 [[projects]]
   name = "github.com/golang/protobuf"
   packages = ["proto","ptypes","ptypes/any","ptypes/duration","ptypes/timestamp"]
-  revision = "6c65a5562fc06764971b7c5d05c76c75e84bdbf7"
-  version = "v1.3.2"
+  revision = "b5d812f8a3706043e23a9cd5babf2e5423744d30"
+  version = "v1.3.1"
 
 [[projects]]
   name = "github.com/google/btree"
@@ -142,14 +142,14 @@
 [[projects]]
   name = "github.com/libvirt/libvirt-go"
   packages = ["."]
-  revision = "2a80233c4f59d0919935c575151cf7de4f3b0cb1"
-  version = "v5.5.0"
+  revision = "31da1edcf4155f2ac2d9fc88f28100aeee526f1a"
+  version = "v5.4.0"
 
 [[projects]]
   name = "github.com/libvirt/libvirt-go-xml"
   packages = ["."]
-  revision = "f103ccd67629eedbcd46cf3f2c952c27637543fd"
-  version = "v5.5.0"
+  revision = "162ef4dd6b365d99715223672c7a2445bd582f75"
+  version = "v5.3.0"
 
 [[projects]]
   name = "github.com/markbates/inflect"
@@ -232,8 +232,8 @@
 [[projects]]
   name = "github.com/prometheus/procfs"
   packages = [".","internal/fs"]
-  revision = "3f98efb27840a48a7a2898ec80be07674d19f9c8"
-  version = "v0.0.3"
+  revision = "833678b5bb319f2d20a475cb165c6cc59c2cc77c"
+  version = "v0.0.2"
 
 [[projects]]
   name = "github.com/rogpeppe/go-internal"
@@ -281,13 +281,13 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["ssh/terminal"]
-  revision = "4def268fd1a49955bfb3dda92fe3db4f924f2285"
+  revision = "cc06ce4a13d484c0101a9e92913248488a75786d"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context","context/ctxhttp","html","html/atom","html/charset","http/httpguts","http2","http2/hpack","idna"]
-  revision = "da137c7871d730100384dbcf36e6f8fa493aef5b"
+  revision = "3b0461eec859c4b73bb64fdc8285971fd33e3938"
 
 [[projects]]
   branch = "master"
@@ -299,7 +299,7 @@
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix","windows"]
-  revision = "04f50cda93cbb67f2afa353c52f342100e80e625"
+  revision = "d432491b91382bba9c2a91776aa47c9430183a6f"
 
 [[projects]]
   name = "golang.org/x/text"
@@ -317,7 +317,7 @@
   branch = "master"
   name = "golang.org/x/tools"
   packages = ["go/ast/astutil","go/gcexportdata","go/internal/gcimporter","go/internal/packagesdriver","go/packages","go/types/typeutil","imports","internal/fastwalk","internal/gopathwalk","internal/imports","internal/module","internal/semver"]
-  revision = "7b25e351ac0e848b1efa6625bde14603cb29e2b3"
+  revision = "6e04913cbbac05c5c0c9d8f237717e292f700e76"
 
 [[projects]]
   name = "google.golang.org/appengine"
@@ -351,10 +351,10 @@
   version = "v2.2.2"
 
 [[projects]]
+  branch = "release-1.13"
   name = "k8s.io/api"
   packages = ["admission/v1beta1","admissionregistration/v1alpha1","admissionregistration/v1beta1","apps/v1","apps/v1beta1","apps/v1beta2","auditregistration/v1alpha1","authentication/v1","authentication/v1beta1","authorization/v1","authorization/v1beta1","autoscaling/v1","autoscaling/v2beta1","autoscaling/v2beta2","batch/v1","batch/v1beta1","batch/v2alpha1","certificates/v1beta1","coordination/v1beta1","core/v1","events/v1beta1","extensions/v1beta1","networking/v1","policy/v1beta1","rbac/v1","rbac/v1alpha1","rbac/v1beta1","scheduling/v1alpha1","scheduling/v1beta1","settings/v1alpha1","storage/v1","storage/v1alpha1","storage/v1beta1"]
   revision = "5cb15d34447165a97c76ed5a60e4e99c8a01ecfe"
-  version = "kubernetes-1.13.4"
 
 [[projects]]
   name = "k8s.io/apiextensions-apiserver"
@@ -363,10 +363,10 @@
   version = "kubernetes-1.13.4"
 
 [[projects]]
+  branch = "release-1.13"
   name = "k8s.io/apimachinery"
   packages = ["pkg/api/errors","pkg/api/meta","pkg/api/resource","pkg/apis/meta/internalversion","pkg/apis/meta/v1","pkg/apis/meta/v1/unstructured","pkg/apis/meta/v1/validation","pkg/apis/meta/v1beta1","pkg/conversion","pkg/conversion/queryparams","pkg/fields","pkg/labels","pkg/runtime","pkg/runtime/schema","pkg/runtime/serializer","pkg/runtime/serializer/json","pkg/runtime/serializer/protobuf","pkg/runtime/serializer/recognizer","pkg/runtime/serializer/streaming","pkg/runtime/serializer/versioning","pkg/selection","pkg/types","pkg/util/cache","pkg/util/clock","pkg/util/diff","pkg/util/errors","pkg/util/framer","pkg/util/intstr","pkg/util/json","pkg/util/mergepatch","pkg/util/naming","pkg/util/net","pkg/util/runtime","pkg/util/sets","pkg/util/strategicpatch","pkg/util/uuid","pkg/util/validation","pkg/util/validation/field","pkg/util/wait","pkg/util/yaml","pkg/version","pkg/watch","third_party/forked/golang/json","third_party/forked/golang/reflect"]
   revision = "86fb29eff6288413d76bd8506874fddd9fccdff0"
-  version = "kubernetes-1.13.4"
 
 [[projects]]
   name = "k8s.io/client-go"
@@ -378,7 +378,7 @@
   branch = "master"
   name = "k8s.io/code-generator"
   packages = ["cmd/client-gen","cmd/client-gen/args","cmd/client-gen/generators","cmd/client-gen/generators/fake","cmd/client-gen/generators/scheme","cmd/client-gen/generators/util","cmd/client-gen/path","cmd/client-gen/types","cmd/deepcopy-gen","cmd/deepcopy-gen/args","pkg/namer","pkg/util"]
-  revision = "583809a49343b2690e46e4cba3496f8e12c27922"
+  revision = "d55040311883850cc5acf9472f2b8098f7b48f22"
 
 [[projects]]
   branch = "master"
@@ -396,13 +396,13 @@
   branch = "master"
   name = "k8s.io/kube-openapi"
   packages = ["pkg/util/proto"]
-  revision = "33be087ad058f99c78e067996202b60230737e49"
+  revision = "db7b694dc208eead64d38030265f702db593fcf2"
 
 [[projects]]
   name = "sigs.k8s.io/cluster-api"
-  packages = ["pkg/apis","pkg/apis/cluster/common","pkg/apis/cluster/v1alpha1","pkg/controller/error","pkg/controller/machine","pkg/controller/remote","pkg/util"]
-  revision = "bf950adfea7c117e58ca30770d02067d8e43d3c7"
-  version = "v0.1.4"
+  packages = ["pkg/apis","pkg/apis/cluster/common","pkg/apis/cluster/v1alpha1","pkg/controller/error","pkg/controller/machine","pkg/util"]
+  revision = "5ed76e24e0319770757c25fdb07669d89b778fd8"
+  version = "0.1.3"
 
 [[projects]]
   name = "sigs.k8s.io/controller-runtime"
