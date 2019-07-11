@@ -10,5 +10,7 @@ spec:
       spec:
         vcpu: 2
         memoryInGB: 2
-        imageURI: /home/carbon/dev/go-projects/src/github.com/himani93/libvirt-go-examples/images/vm-images/vm3/base.qcow2
-        userDataURI: /home/carbon/dev/go-projects/src/github.com/himani93/libvirt-go-examples/images/vm-images/vm3/user-data.img
+        imageURI: /home/carbon/dev/go-projects/src/sigs.k8s.io/cluster-api-provider-libvirt/samples/images/kubernetes-boot-image.qcow2
+        userDataURI: /home/carbon/dev/go-projects/src/sigs.k8s.io/cluster-api-provider-libvirt/samples/images/user-data.img
+
+
